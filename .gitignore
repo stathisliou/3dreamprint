@@ -1,6 +1,8 @@
 /*.tgz
 db.sqlite3
-dreamenv
+py2env
+env3
+
 migrations
 media
 *.pyc
