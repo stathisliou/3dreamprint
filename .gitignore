@@ -1,6 +1,8 @@
 /*.tgz
 db.sqlite3
-3denv
+py2env
+env3
+
 migrations
 media
 *.pyc
