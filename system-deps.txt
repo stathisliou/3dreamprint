@@ -1,0 +1,26 @@
+Install Pyhton 3.5
+-required for celery
+
+  sudo add-apt-repository ppa:fkrull/deadsnakes
+  sudo apt-get update
+  sudo apt-get install python3.5
+
+Install python 3 pip
+  sudo apt-get install python3-pip
+
+
+Activate a python3 virtualenv
+
+  virtualenv -p /usr/bin/python3 envname
+
+Get through egg-info error
+
+  sudo apt-get install python-dev libpython-dev libevent-dev
+
+  download this file https://bootstrap.pypa.io/ez_setup.py
+  [sudo] python ez_setup.py
+
+  here is a useful stackoverflow link
+  http://stackoverflow.com/questions/17886647/cant-install-via-pip-because-of-egg-info-error
+
+Dont use requirements.txt install the dependencies straight through the terminal :-/
