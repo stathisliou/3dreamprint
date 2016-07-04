@@ -1,8 +1,0 @@
-
-Babel==2.3.4
-celery==3.1.18
-Django==1.8.6
-django-ckeditor==5.0.3
-flower==0.9.1
-Pillow==3.3.0
-tornado==4.2
