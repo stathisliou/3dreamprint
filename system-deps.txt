@@ -24,3 +24,10 @@ Get through egg-info error
   http://stackoverflow.com/questions/17886647/cant-install-via-pip-because-of-egg-info-error
 
 Dont use requirements.txt install the dependencies straight through the terminal :-/
+
+Git
+
+1. git checkout -b kkampardi-master master
+2. git pull https://github.com/kkampardi/3dreamprint.git master
+3. git checkout master
+4. git merge --no-ff stathisliou-master
