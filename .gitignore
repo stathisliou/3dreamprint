@@ -2,7 +2,7 @@
 db.sqlite3
 py2env
 env3
-z
+
 migrations
 media
 *.pyc
