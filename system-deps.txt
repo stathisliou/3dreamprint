@@ -1,5 +1,5 @@
 Install Pyhton 3.5
--required for celery
+*required for celery
 
   sudo add-apt-repository ppa:fkrull/deadsnakes
   sudo apt-get update
@@ -12,6 +12,7 @@ Install python 3 pip
 Activate a python3 virtualenv
 
   virtualenv -p /usr/bin/python3 envname
+  source envname/bin/activate
 
 Get through egg-info error
 
@@ -23,4 +24,5 @@ Get through egg-info error
   here is a useful stackoverflow link
   http://stackoverflow.com/questions/17886647/cant-install-via-pip-because-of-egg-info-error
 
-Dont use requirements.txt install the dependencies straight through the terminal :-/
+
+Install requirements.txt via pip (not pip3)
