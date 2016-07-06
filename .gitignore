@@ -1,7 +1,6 @@
 /*.tgz
 db.sqlite3
-envname
-bower_components
+myenv
 migrations
 media
 *.pyc

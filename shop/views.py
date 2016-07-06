@@ -1,13 +1,7 @@
 from django.shortcuts import render, get_object_or_404
-from django.conf import settings
 from .models import Category, Product
 from cart.forms import CartAddProductForm
 
-
-
-# define django/angularjs view for home
-def home(req):
-    return render(req, 'base.html', {'STATIC_URL': settings.STATIC_URL})
 
 def product_list(request, category_slug=None):
     category = None

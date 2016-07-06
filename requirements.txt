@@ -1,13 +1,8 @@
-amqp==1.4.9
-anyjson==0.3.3
+
 Babel==2.3.4
-billiard==3.3.0.23
 celery==3.1.18
 Django==1.8.6
 django-ckeditor==5.0.3
 flower==0.9.1
-kombu==3.0.35
 Pillow==3.3.0
-pytz==2016.4
 tornado==4.2
-wheel==0.24.0
