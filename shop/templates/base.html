@@ -1,22 +1,21 @@
 {% load staticfiles %}
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en" ng-app="treedreamApp">
 <head>
     <title>1E-shop - OnePage one product shop</title>
     <meta charset="utf-8">
     <meta name="description" content="1E-shop - Bootstrap Theme from angelostudio.net">
     <meta name="author" content="ANGELOSTUDIO.NET">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
-    <link rel="stylesheet" href="{% static 'css/style-yellow.css' %}">
+    <link rel="stylesheet" href="{% static 'bower_components/bootstrap/dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bower_components/font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bower_components/bootstrap/css/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'bower_components/bootstrap/css/style-yellow.css' %}">
 	<link rel="shortcut icon" href="{% static 'img/ico/32.png' %}" sizes="32x32" type="image/png" />
 	<link rel="apple-touch-icon-precomposed" href="{% static 'img/ico/60.png' %}" type="image/png" />
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{% static 'img/ico/72.png' %}" type="image/png" />
 	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="{% static 'img/ico/120.png' %}" type="image/png" />
 	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="{% static 'img/ico/152.png' %}" type="image/png" />
-    <script type="text/javascript" src="js/modernizr.min.js"></script>
 	<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -43,24 +42,39 @@
       </div>
 
 	<div id="wrap">
-    {% block content %}
+  <!-- Replace  djangos
+   {% block content %}
     {% endblock %}
+    with -->
+    <div ui-view="content"></div>
 	</div>
+  <scirpt>
+var static_url = '{{STATIC_URL}}'
+</scirpt>
     <!-- Core scrips -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-    <script type="text/javascript" src="{% static 'js/core.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/menu-overlay.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/placeholders.min.js' %}"></script>
     <!-- end core scripts -->
+    <!--angular scripts -->
+    <script type="text/javascript" src="{% static 'bower_components/jquery/dist/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bower_components/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bower_components/angular/angular.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bower_components/angular-route/angular-route.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bower_components/angular-resource/angular-resource.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bower_components/angular-ui-router/release/angular-ui-router.js' %}"></script>
+    <script type="text/javascript" src="{% static 'angularapp/scripts/app.js' %}"></script>
+    <script type="text/javascript" src="{% static 'angularapp/scripts/controllers.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bower_components/jquery/js/core.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bower_components/jquery/js/menu-overlay.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bower_components/jquery/js/placeholders.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bower_components/jquery/js/modernizr.min.js' %}"></script>
+    <!-- end angular scripts -->
     <!-- sliders -->
-    <script type="text/javascript" src="{% static 'js/owl.carousel.min.js' %}"></script>
-   	<script type="text/javascript" src="{% static 'js/jquery.waitforimages.min.js' %}"></script>
-   	<script type="text/javascript" src="{% static 'js/sliders.js' %}"></script>
-	<script type="text/javascript" src="{% static 'js/jquery.counterup.min.js' %}"></script>
-	<script type="text/javascript" src="{% static 'js/numbers.js' %}"></script>
-	<script type="text/javascript" src="{% static 'js/contact.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bower_components/jquery/js/owl.carousel.min.js' %}"></script>
+   	<script type="text/javascript" src="{% static 'bower_components/jquery/js/jquery.waitforimages.min.js' %}"></script>
+   	<script type="text/javascript" src="{% static 'bower_components/jquery/js/sliders.js' %}"></script>
+  	<script type="text/javascript" src="{% static 'bower_components/jquery/js/jquery.counterup.min.js' %}"></script>
+  	<script type="text/javascript" src="{% static 'bower_components/jquery/js/numbers.js' %}"></script>
+  	<script type="text/javascript" src="{% static 'bower_components/jquery/js/contact.js' %}"></script>
 </body>
 
 </html>
