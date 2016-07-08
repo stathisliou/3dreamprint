@@ -41,6 +41,9 @@ INSTALLED_APPS = (
     'shop',
     'cart',
     'orders',
+    'paypal.standard.ipn',
+    'payment',
+
 )
 
 MIDDLEWARE_CLASSES = (
@@ -110,3 +113,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 CART_SESSION_ID = 'cart'
+
+#django-paypall settings
+PAYPAL_RECEIVER_EMAIL = 'vale oti 8es..mypaypalemail@myshop.com'
+PAYPAL_TEST = True
