@@ -7,3 +7,4 @@ flower==0.9.1
 Pillow==3.3.0
 tornado==4.2
 django-paypal==0.2.5
+WeasyPrint==0.24
