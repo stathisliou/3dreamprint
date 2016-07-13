@@ -1,6 +1,7 @@
 /*.tgz
 db.sqlite3
 myenv
+threedreamenv
 migrations
 media
 *.pyc
