@@ -23,8 +23,6 @@ Get through egg-info error
   here is a useful stackoverflow link
   http://stackoverflow.com/questions/17886647/cant-install-via-pip-because-of-egg-info-error
 
-Dont use requirements.txt install the dependencies straight through the terminal :-/
-
 Git
 
 1. git checkout -b kkampardi-master master
