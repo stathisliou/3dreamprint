@@ -1,6 +1,8 @@
 /*.tgz
+db.sqlite3
 myenv
 threedreamenv
+venv
 migrations
 media
 *.pyc
@@ -16,7 +18,6 @@ settings_local.py
 settings_production.py
 post-double.py
 labels
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

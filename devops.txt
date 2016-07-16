@@ -29,3 +29,8 @@ Git
 2. git pull https://github.com/kkampardi/3dreamprint.git master
 3. git checkout master
 4. git merge --no-ff stathisliou-master
+
+
+***Install weasy print***
+
+1. sudo apt-get install libffi-dev libxml2-dev libxslt1-dev did the trick on my picolo laptop
