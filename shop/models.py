@@ -1,5 +1,14 @@
 from django.db import models
 from django.core.urlresolvers import reverse
+from django.utils import timezone
+from django.contrib.auth.models import User
+from ckeditor.fields import RichTextField
+
+
+class ProductManager(models.Manager):
+    def get_queryset(self):
+        return super(ProductManager, self).get_queryset()\
+            .filter(available=True)
 
 
 class Category(models.Model):
@@ -29,6 +38,10 @@ class Product(models.Model):
     available = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+
+    objects = models.Manager()  # The default manager.
+    in_stock = ProductManager()  # Our custom manager.
+
 
     class Meta:
         ordering = ('-created',)
