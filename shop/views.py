@@ -1,7 +1,30 @@
 from django.shortcuts import render, get_object_or_404
+from rest_framework import viewsets
+from django.views.decorators.csrf import ensure_csrf_cookie
+from django.views.generic.base import TemplateView
+from django.utils.decorators import method_decorator
+
 from .models import Category, Product, ProductManager
+from .serializers import ProductSerializer
 from cart.forms import CartAddProductForm
 
+
+
+# start REST views
+class IndexView(TemplateView):
+    template_name = 'shop/home.html'
+
+    @method_decorator(ensure_csrf_cookie)
+    def dispatch(self, *args, **kwargs):
+        return super(IndexView, self).dispatch(*args, **kwargs)
+
+
+class ProductViewSet(viewsets.ModelViewSet):
+    lookup_field = 'name'
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
+
+# end REST views
 
 def product_list(request, category_slug=None):
     category = None
