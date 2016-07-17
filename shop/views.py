@@ -1,13 +1,12 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, Response
 from rest_framework import viewsets
 from django.views.decorators.csrf import ensure_csrf_cookie
 from django.views.generic.base import TemplateView
 from django.utils.decorators import method_decorator
 
-from .models import Category, Product, ProductManager
+from .models import Category, Product
 from .serializers import ProductSerializer
 from cart.forms import CartAddProductForm
-
 
 
 # start REST views
@@ -24,7 +23,14 @@ class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
 
+    def list(self, request):
+        queryset = self.queryset.filter
+        serializer = self.serializer_class(queryset)
+
+        return Response(serializer.data)
+
 # end REST views
+
 
 def product_list(request, category_slug=None):
     category = None
