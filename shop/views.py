@@ -1,5 +1,6 @@
-from django.shortcuts import render, get_object_or_404, Response
+from django.shortcuts import render, get_object_or_404
 from rest_framework import viewsets
+from rest_framework.response import Response
 from django.views.decorators.csrf import ensure_csrf_cookie
 from django.views.generic.base import TemplateView
 from django.utils.decorators import method_decorator
